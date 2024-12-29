@@ -2,7 +2,7 @@
 # def isBadVersion(version: int) -> bool:
 
 def isBadVersion(version: int) -> bool:
-    return version >= 1234
+    return version >= 111
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
@@ -12,9 +12,12 @@ class Solution:
         while left < right - 1:
             mid = int((left + right) / 2)
             if isBadVersion(mid):
+                if not isBadVersion(mid - 1):
+                    return mid
                 right = mid
             else:
                 left = mid
+            
         result = left if isBadVersion(left) else right
         return result
 
