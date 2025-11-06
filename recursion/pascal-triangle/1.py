@@ -7,7 +7,7 @@ Calculate row[n] from row[n-1]
 
 Time: O(N^2) = 1 + 2 + 3 + ... + n
 
-Space: O(N^2) = height of Recursion stack N * nums of local variable (numRows 1 + result N)
+Space: O(N^3) = height of Recursion stack N * nums of local variable (numRows 1 + result N^2)
 """
 
 from typing import List
