@@ -1,6 +1,6 @@
 """
 Time: O(N^k)
-Space: O(N^k) = N^k(ans) + k(depth of recursion stack) * 1(input i)
+Space: O(N^k) = N^k(ans) + k(current) + k(depth of recursion stack) * 1(input i)
 """
 
 from typing import List
