@@ -3,8 +3,8 @@
 Idea: Use a deque, traverse and append everything
 After reaching the end, pop and popleft until deque empty
 
-Time:
-Space:
+Time: O(N)
+Space: O(N)
 """
 
 from typing import Deque, Optional
