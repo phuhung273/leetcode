@@ -19,21 +19,22 @@ class Solution:
             '9': 'wxyz',
         }
 
-        result = []
-        current = []
+        ans = []
+        curr = []
 
         def choose(i: int):
             if i == len(digits):
-                result.append("".join(current))
+                ans.append("".join(curr))
                 return
-
-            for j in charMap[digits[i]]:
-                current.append(j)
+            
+            for char in charMap[digits[i]]:
+                curr.append(char)
                 choose(i + 1)
-                current.pop()
+                curr.pop()
+
         choose(0)
-        return result
+        return ans
 
 sol = Solution()
-# sol.letterCombinations('23')
+sol.letterCombinations('23')
 sol.letterCombinations('2')
