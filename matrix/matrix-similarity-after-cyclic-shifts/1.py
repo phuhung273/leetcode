@@ -6,6 +6,9 @@ Double each row.
 For even, left = 0, right = k. Iterate and check
 For odd, left = 0, right = n - k. Do the same
 
+Time: O(mn)
+Space: O(mn)
+
 --------------
 
 For even row after k shift left:
@@ -16,7 +19,7 @@ For odd row after k shift right:
 If i < k, compare i and n - k + i
 
 Time: O(mn)
-Space: O(mn)
+Space: O(1)
 """
 
 from typing import List
