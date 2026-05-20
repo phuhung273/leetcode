@@ -1,7 +1,7 @@
 """
 Problem: https://leetcode.com/problems/minimum-common-value
 Idea: Have 2 pointers p1 and p2. Increase whichever is smaller until end of array
-Time: O(max(M, n))
+Time: O(m + n)
 Space: O(1)
 """
 
