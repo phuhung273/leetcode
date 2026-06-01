@@ -24,22 +24,11 @@ from typing import List
 class Solution:
     def minimumCost(self, cost: List[int]) -> int:
         ans = 0
-        cost.sort()
-        n = len(cost)
+        cost.sort(reverse=True)
 
-        curr = 0
-        for i in range(n):
-            remainder = i % 3
-            if remainder == 0:
-                curr = cost[n - i - 1]
-            elif remainder == 2:
-                ans += curr
-                curr = 0
-            else:
-                curr += cost[n - i - 1]
-        
-        if curr != 0:
-            ans += curr
+        for i in range(len(cost)):
+            if i % 3 != 2:
+                ans += cost[i]
 
         return ans
 
